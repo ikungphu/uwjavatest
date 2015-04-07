@@ -92,12 +92,12 @@ public class TestPerson {
     Person ted = new Person("Ted", 43, 250000);
 	 
 	 ted.addPropertyChangeListener(new PropertyChangeListener() {
-	 		public void propertyChange(PropertyChangeEvent evt) {
-				assertEquals("ssn", evt.getPropertyName());
-			   assertEquals("", evt.getOldValue());
-			   assertEquals("012-34-5678", evt.getNewValue());
-			}
-	 } );
+      public void propertyChange(PropertyChangeEvent pce) {
+        assertEquals("ssn", pce.getPropertyName());
+        assertEquals("", pce.getOldValue());
+        assertEquals("012-34-5678", pce.getNewValue());
+      }
+    });
 	 
     // ============ YOUR CHANGES BEGIN HERE
     // Call addPropertyChangeListener with a PropertyChangedListener
